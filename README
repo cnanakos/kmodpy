@@ -1,0 +1,33 @@
+kmodpy
+------
+
+The libkmod2 is a library that provides an API for insertion, removal,
+configuration and listing of kernel modules.
+
+kmodpy is a Python ctypes wrapper module for libkmod, exposing common module
+operations: listing of installed modules, modprobe, modinfo, show_depends and
+rmmod.
+
+Follows an example executed as root:
+
+::
+
+    >>> import kmodpy
+    >>> km = kmodpy.Kmod()
+    >>> [m for m in km.list()]
+        [(u'nfs', 407706),
+         (u'nfs_acl', 12741)
+         ...
+         (u'virtio_blk', 17549)]
+    >>> km.modprobe("loop", extra_options="max_loop=8")
+    >>> km.rmmod("loop")
+    >>> list(km.modinfo("loop"))
+        [('alias', 'char-major-10-237'), ('alias', 'block-major-7-*'),
+         ('license', 'GPL'), ('parm', 'max_part:Maximum number of
+         partitions per loop device'), ('parmtype', 'max_part:int'),
+         ('parm', 'max_loop:Maximum number of loop
+         devices'), ('parmtype', 'max_loop:int'), ('depends', ''),
+         ('intree', 'Y'), ('vermagic', '3.12-1-amd64 SMP mod_unload
+         modversions '), ('alias', 'devname:loop-control')]
+    >>> list(km.show_depends("ext4"))
+        ['mbcache', 'crc16', 'jbd2']
