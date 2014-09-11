@@ -1,0 +1,5 @@
+kmodpy (0.1.10-1) unstable; urgency=low
+
+  * Initial release (Closes: Bug#747480)
+
+ -- Nanakos Chrysostomos <nanakos@wired-net.gr>  Fri, 09 May 2014 10:45:45 +0300
