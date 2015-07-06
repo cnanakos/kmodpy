@@ -1,16 +1,17 @@
 Source: kmodpy
-Maintainer: Nanakos Chrysostomos <nanakos@wired-net.gr>
+Maintainer: Chrysostomos Nanakos <cnanakos@debian.org>
 Section: python
 Priority: optional
-X-Python-Version: >= 2.6
-Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 9)
+X-Python-Version: >= 2.7
+Build-Depends: python-setuptools, python-all, debhelper (>= 9), dh-python
 Homepage: https://github.com/cnanakos/kmodpy
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Vcs-Git: git://github.com/cnanakos/kmodpy.git -b debian
 Vcs-Browser: https://github.com/cnanakos/kmodpy/tree/debian/debian
 
 Package: python-kmodpy
-Architecture: all
+Architecture: linux-any
+Multi-Arch: same
 Depends: ${misc:Depends}, ${python:Depends}, libkmod2 (>=18-1)
 Description: Python binding for kmod
  The libkmod2 is a library that provides an API for insertion, removal,

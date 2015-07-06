@@ -1,3 +1,10 @@
+kmodpy (0.1.10-2) unstable; urgency=medium
+
+  * Bump S-V to 3.9.6.
+  * Lintian cleaning.
+
+ -- Chrysostomos Nanakos <cnanakos@debian.org>  Fri, 03 Jul 2015 11:57:19 +0300
+
 kmodpy (0.1.10-1) unstable; urgency=low
 
   * Initial release (Closes: Bug#747480)
