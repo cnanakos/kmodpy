@@ -18,7 +18,7 @@
 
 from ctypes import *
 from ctypes.util import find_library
-from _libkmod_h import *
+from ._libkmod_h import *
 
 libkmod = find_library("kmod")
 if libkmod is None:

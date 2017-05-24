@@ -21,8 +21,8 @@ from ctypes import (
     byref,
     addressof
 )
-from _libkmod import *
-from error import KmodError
+from ._libkmod import *
+from .error import KmodError
 import errno
 
 
