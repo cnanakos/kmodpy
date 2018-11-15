@@ -18,10 +18,10 @@
 
 import os
 import sys
-if sys.version < (2, 6):
+if sys.version_info < (2, 6):
     from distutils.command import register
 
-    def isstr((k, v)):
+    def isstr(k, v):
         return isinstance(v, basestring)
 
     def patch(func):
