@@ -3,6 +3,7 @@ kmodpy (0.1.10-3) UNRELEASED; urgency=medium
   * Trim trailing whitespace.
   * Use versioned copyright format URI.
   * Remove unnecessary X-Python{,3}-Version field in debian/control.
+  * Use secure URI in debian/watch.
 
  -- Debian Janitor <janitor@jelmer.uk>  Tue, 28 Apr 2020 18:39:50 +0000
 
