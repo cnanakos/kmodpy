@@ -2,7 +2,6 @@ Source: kmodpy
 Maintainer: Chrysostomos Nanakos <cnanakos@debian.org>
 Section: python
 Priority: optional
-X-Python-Version: >= 2.7
 Build-Depends: python-setuptools, python-all, debhelper (>= 9), dh-python
 Homepage: https://github.com/cnanakos/kmodpy
 Standards-Version: 3.9.6
